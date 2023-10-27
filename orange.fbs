@@ -1,0 +1,23 @@
+namespace MyNamespace;
+
+table A {
+  id: int;
+  name: string;
+}
+
+table B {
+  id: int;
+  value: float;
+}
+
+union AorB {
+  A,
+  B
+}
+
+table RootTable
+{
+    data: AorB;
+}
+
+root_type RootTable;
